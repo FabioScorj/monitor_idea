@@ -1,0 +1,41 @@
+name: Monitor IDEA · SICOP MP-BA
+
+on:
+  schedule:
+    - cron: '0 14 * * *'   # 11h BRT
+    - cron: '0 18 * * *'   # 15h BRT
+    - cron: '0 20 * * *'   # 17h BRT
+    - cron: '0 22 * * *'   # 19h BRT
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar Chrome
+        run: |
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Instalar dependências Python
+        run: pip install requests selenium webdriver-manager
+
+      - name: Rodar monitor
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: python monitor_idea.py
