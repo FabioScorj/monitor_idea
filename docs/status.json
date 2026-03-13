@@ -1,59 +1,59 @@
 {
-  "ultima_verificacao": "12/03/2026 21:07",
+  "ultima_verificacao": "13/03/2026 11:36",
   "ideas": [
     {
       "nome": "Leandro Sansom",
-      "status": "baseline",
-      "hash": "bf0b62750c22c0364960",
-      "ultima_verificacao": "12/03/2026 21:07",
+      "status": "atualizado",
+      "hash": "f536a2d2a997d1fe0a6e",
+      "ultima_verificacao": "13/03/2026 11:35",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87Z/rcsjolQ3gnC0GZFPwmKuFX9DoeHylJQ==#tabela-resultado",
       "erro": null
     },
     {
       "nome": "Emporio II",
-      "status": "baseline",
-      "hash": "c5fdd7c11a7a58a30bab",
-      "ultima_verificacao": "12/03/2026 21:07",
+      "status": "atualizado",
+      "hash": "4cf7ef8e1eb5cc039041",
+      "ultima_verificacao": "13/03/2026 11:35",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm7GOhf3NBvJxPHjDdi6yVUmSr7RNnASmfg==",
       "erro": null
     },
     {
       "nome": "Emporio I",
-      "status": "baseline",
-      "hash": "92f29f445974cd537cce",
-      "ultima_verificacao": "12/03/2026 21:07",
+      "status": "atualizado",
+      "hash": "ec6abec953bb36a9766b",
+      "ultima_verificacao": "13/03/2026 11:36",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm8V69edbtqAzNFmRrplM0oJzQgYajEecEQ==",
       "erro": null
     },
     {
       "nome": "Jô Paz",
-      "status": "baseline",
-      "hash": "23980280e48a9b7aeb4c",
-      "ultima_verificacao": "12/03/2026 21:07",
+      "status": "atualizado",
+      "hash": "689d1b5164ca250768ec",
+      "ultima_verificacao": "13/03/2026 11:36",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm1IuhGVCUinkoH9MjYinD1ii+n1KLCo4Pw==",
       "erro": null
     },
     {
       "nome": "Diarias II",
-      "status": "baseline",
-      "hash": "306533f4199b3808a59a",
-      "ultima_verificacao": "12/03/2026 21:07",
+      "status": "atualizado",
+      "hash": "7997fd7181cf7f645d2b",
+      "ultima_verificacao": "13/03/2026 11:36",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87ZX4yW5AKi6TXzrHANkpI/0hssBw3ax1CA==",
       "erro": null
     },
     {
       "nome": "Maurilio",
-      "status": "baseline",
-      "hash": "36b2f6100adc6b51656a",
-      "ultima_verificacao": "12/03/2026 21:07",
+      "status": "atualizado",
+      "hash": "13145a021a70c0654b51",
+      "ultima_verificacao": "13/03/2026 11:36",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlmy+RkXYEJLFE1fVii7QiX1pP6ennsdbx4Q==",
       "erro": null
     },
     {
       "nome": "Acompanhamento TAC",
-      "status": "baseline",
-      "hash": "6e7f4d03144efb185fbb",
-      "ultima_verificacao": "12/03/2026 21:07",
+      "status": "atualizado",
+      "hash": "3ec08a692e8338c12130",
+      "ultima_verificacao": "13/03/2026 11:36",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87apHwKjrDMZZOeguNj5nYgCkBhW1SSUDPA==#tabela-resultado",
       "erro": null
     }
