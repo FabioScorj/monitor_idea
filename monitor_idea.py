@@ -36,6 +36,17 @@ STATUS_FILE = "docs/status.json"
 BRT = timezone(timedelta(hours=-3))
 
 # ──────────────────────────────────────────────
+# Verifica dia útil (seg–sex, horário BRT)
+# ──────────────────────────────────────────────
+def is_dia_util():
+    agora = datetime.now(BRT)
+    # weekday(): 0=segunda ... 4=sexta, 5=sabado, 6=domingo
+    if agora.weekday() >= 5:
+        print(f"  Hoje é {'sábado' if agora.weekday()==5 else 'domingo'} — monitoramento suspenso.")
+        return False
+    return True
+
+# ──────────────────────────────────────────────
 # Selenium
 # ──────────────────────────────────────────────
 def get_driver():
@@ -50,25 +61,15 @@ def get_driver():
     return webdriver.Chrome(service=service, options=opts)
 
 def extract_stable_content(driver, url):
-    """
-    Extrai apenas o conteúdo estável da página:
-    - Tenta pegar linhas da tabela de movimentações/andamentos
-    - Remove qualquer coisa dinâmica (timestamps de sessão, tokens, viewstate)
-    - Retorna texto normalizado e estável entre execuções
-    """
     driver.get(url)
     try:
-        WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.TAG_NAME, "body"))
-        )
+        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
         time.sleep(4)
     except Exception:
         pass
 
-    # Tenta extrair linhas de tabelas (conteúdo mais estável)
     rows = []
     try:
-        # Busca todas as linhas de tabelas visíveis
         trs = driver.find_elements(By.CSS_SELECTOR, "table tr")
         for tr in trs:
             text = tr.text.strip()
@@ -80,23 +81,16 @@ def extract_stable_content(driver, url):
     if rows:
         content = "\n".join(rows)
     else:
-        # Fallback: pega o body todo
         try:
             content = driver.find_element(By.TAG_NAME, "body").text
         except Exception:
             content = driver.page_source
 
-    # Remove padrões dinâmicos conhecidos:
-    # - ViewState e tokens ocultos
     content = re.sub(r'__VIEWSTATE[^\n]*', '', content)
     content = re.sub(r'__EVENTVALIDATION[^\n]*', '', content)
-    # - Timestamps de sessão (formato HH:MM:SS)
     content = re.sub(r'\b\d{2}:\d{2}:\d{2}\b', '', content)
-    # - GUIDs e tokens aleatórios longos
     content = re.sub(r'[a-f0-9]{32,}', '', content)
-    # - Espaços extras
     content = re.sub(r'\s+', ' ', content).strip()
-
     return content
 
 def make_hash(text):
@@ -168,6 +162,11 @@ def main():
     print("  Monitor IDEA · SICOP MP-BA")
     print(f"  {datetime.now(BRT).strftime('%d/%m/%Y %H:%M BRT')}")
     print("=" * 55)
+
+    if not is_dia_util():
+        print("  Encerrando sem verificar.")
+        print("=" * 55)
+        return
 
     state   = load_state()
     driver  = get_driver()
