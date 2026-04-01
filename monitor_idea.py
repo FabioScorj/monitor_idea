@@ -18,14 +18,13 @@ from webdriver_manager.chrome import ChromeDriverManager
 # ──────────────────────────────────────────────
 IDEAS = [
     {"nome": "Leandro Sansom",     "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87Z/rcsjolQ3gnC0GZFPwmKuFX9DoeHylJQ==#tabela-resultado"},
-    {"nome": "Emporio #1",          "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87b9x30AcLOZR2Jf6GHMNffzuktDi67epew=="},
+    {"nome": "Emporio #1",         "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87b9x30AcLOZR2Jf6GHMNffzuktDi67epew=="},
     {"nome": "Emporio I",          "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm8V69edbtqAzNFmRrplM0oJzQgYajEecEQ=="},
     {"nome": "Emporio II",         "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm7GOhf3NBvJxPHjDdi6yVUmSr7RNnASmfg=="},
     {"nome": "Jô Paz",             "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm1IuhGVCUinkoH9MjYinD1ii+n1KLCo4Pw=="},
     {"nome": "Diarias II",         "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87ZX4yW5AKi6TXzrHANkpI/0hssBw3ax1CA=="},
     {"nome": "Maurilio",           "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlmy+RkXYEJLFE1fVii7QiX1pP6ennsdbx4Q=="},
     {"nome": "Acompanhamento TAC", "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87apHwKjrDMZZOeguNj5nYgCkBhW1SSUDPA==#tabela-resultado"},
-    
 ]
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
@@ -42,7 +41,6 @@ BRT = timezone(timedelta(hours=-3))
 # ──────────────────────────────────────────────
 def is_dia_util():
     agora = datetime.now(BRT)
-    # weekday(): 0=segunda ... 4=sexta, 5=sabado, 6=domingo
     if agora.weekday() >= 5:
         print(f"  Hoje é {'sábado' if agora.weekday()==5 else 'domingo'} — monitoramento suspenso.")
         return False
@@ -170,9 +168,7 @@ def main():
         print("=" * 55)
         return
 
-    # 🔥 RESET DO ESTADO (força novo baseline)
-    save_state({})
-    state = {}
+    state   = load_state()
     driver  = get_driver()
     results = []
     alertas = []
