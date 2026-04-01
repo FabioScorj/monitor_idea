@@ -24,6 +24,7 @@ IDEAS = [
     {"nome": "Diarias II",         "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87ZX4yW5AKi6TXzrHANkpI/0hssBw3ax1CA=="},
     {"nome": "Maurilio",           "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlmy+RkXYEJLFE1fVii7QiX1pP6ennsdbx4Q=="},
     {"nome": "Acompanhamento TAC", "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87apHwKjrDMZZOeguNj5nYgCkBhW1SSUDPA==#tabela-resultado"},
+    {"nome": "Emporio #1",          "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87b9x30AcLOZR2Jf6GHMNffzuktDi67epew=="},
 ]
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
