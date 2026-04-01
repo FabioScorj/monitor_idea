@@ -169,7 +169,9 @@ def main():
         print("=" * 55)
         return
 
-    state   = load_state()
+    # 🔥 RESET DO ESTADO (força novo baseline)
+    save_state({})
+    state = {}
     driver  = get_driver()
     results = []
     alertas = []
