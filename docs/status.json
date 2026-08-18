@@ -1,67 +1,67 @@
 {
-  "ultima_verificacao": "18/08/2026 11:21",
+  "ultima_verificacao": "18/08/2026 15:47",
   "ideas": [
     {
       "nome": "Leandro Sansom",
-      "status": "sem_mudanca",
-      "hash": "b46dd97a6db730b2da0c",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "status": "atualizado",
+      "hash": "f8f1a13f681ebe3b6afc",
+      "ultima_verificacao": "18/08/2026 15:38",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87Z/rcsjolQ3gnC0GZFPwmKuFX9DoeHylJQ==#tabela-resultado",
       "erro": null
     },
     {
       "nome": "Emporio #1",
-      "status": "sem_mudanca",
-      "hash": "13596e17fdf2ef88cc79",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "status": "atualizado",
+      "hash": "4edebbdc5cf21782a3cb",
+      "ultima_verificacao": "18/08/2026 15:38",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87b9x30AcLOZR2Jf6GHMNffzuktDi67epew==",
       "erro": null
     },
     {
       "nome": "Emporio I",
-      "status": "sem_mudanca",
-      "hash": "76190e7b64d87ec4efa8",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "status": "atualizado",
+      "hash": "c8e64e1b99608780c1cd",
+      "ultima_verificacao": "18/08/2026 15:39",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm8V69edbtqAzNFmRrplM0oJzQgYajEecEQ==",
       "erro": null
     },
     {
       "nome": "VLI Logistica",
-      "status": "sem_mudanca",
-      "hash": "bc47a292302a5a74b4a3",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "status": "atualizado",
+      "hash": "64485c61684ba6e6a0b2",
+      "ultima_verificacao": "18/08/2026 15:40",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlmzOwO4uCgYSBKWR5B/elHnkGhotkmIDwww==",
       "erro": null
     },
     {
       "nome": "Emporio II",
-      "status": "sem_mudanca",
-      "hash": "18b25fe5e39c1c95ff21",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "status": "atualizado",
+      "hash": "e029854120c1930b36f9",
+      "ultima_verificacao": "18/08/2026 15:42",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm7GOhf3NBvJxPHjDdi6yVUmSr7RNnASmfg==",
       "erro": null
     },
     {
       "nome": "Jô Paz",
-      "status": "sem_mudanca",
-      "hash": "55ea7ac650db5f394a33",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "status": "atualizado",
+      "hash": "fc1c1122cf9df86119e6",
+      "ultima_verificacao": "18/08/2026 15:43",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlm1IuhGVCUinkoH9MjYinD1ii+n1KLCo4Pw==",
       "erro": null
     },
     {
       "nome": "Diarias II",
-      "status": "sem_mudanca",
+      "status": "erro",
       "hash": "eca785046bd9ed4fbb4e",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "ultima_verificacao": "18/08/2026 15:45",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87ZX4yW5AKi6TXzrHANkpI/0hssBw3ax1CA==",
-      "erro": null
+      "erro": "HTTPConnectionPool(host='localhost', port=55377): Read timed out. (read timeout=120)"
     },
     {
       "nome": "Maurilio",
       "status": "sem_mudanca",
       "hash": "54a1df75f0961f4b5649",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "ultima_verificacao": "18/08/2026 15:47",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZay/N8MYuNlmy+RkXYEJLFE1fVii7QiX1pP6ennsdbx4Q==",
       "erro": null
     },
@@ -69,7 +69,7 @@
       "nome": "Acompanhamento TAC",
       "status": "sem_mudanca",
       "hash": "bcb3a5199e771b397df4",
-      "ultima_verificacao": "18/08/2026 11:21",
+      "ultima_verificacao": "18/08/2026 15:47",
       "url": "https://sicop.sistemas.mpba.mp.br/Modulos/Consulta/Processo.aspx?L0QifJI5OZahgUIIKOI87apHwKjrDMZZOeguNj5nYgCkBhW1SSUDPA==#tabela-resultado",
       "erro": null
     }
